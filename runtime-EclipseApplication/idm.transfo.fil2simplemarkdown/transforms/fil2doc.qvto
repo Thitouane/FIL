@@ -1,0 +1,105 @@
+modeltype filMM "strict" uses "http://www.example.org/mm";
+modeltype smdMM "strict" uses "http://www.example.org/simplemarkdown";
+
+transformation portail2folder( in fil : filMM, out smd : smdMM);
+
+main() {
+	fil.allInstances(FIL)[FIL] -> map portail2folder();
+}
+
+mapping filMM::FIL::portail2folder() : smdMM::Folder {
+	result.name := self.name;
+	result.documents += self.composeDesFormations -> map formation2document();
+}
+
+mapping filMM::Formation::formation2document() : smdMM::Document {
+	result.name := self.name;
+	self.composeDesMentions -> forEach(mention) {
+		result.contents += mention -> map mention2Title(self);
+		result.contents += mention -> map mention2Paragraph();
+		result.contents += mention -> map mention2reponsableParagraph();
+		//mention.ressourcesAdministratives
+		
+		mention.composeDesParcours -> forEach(parcours) {
+			result.contents += parcours -> map parcours2Title();
+			result.contents += parcours -> map parcours2Paragraph();
+			result.contents += parcours -> map parcours2ResponsablePararaph();
+				
+			//UE obligatoire
+			parcours.ueObligatoires -> forEach(ue) {
+				result.contents += ue -> map ue2Title(parcours);
+				result.contents += ue -> map ue2Paragraph(parcours);
+				
+				//foreach
+				//result.contents += ue -> map ue2EnseignantsPararaph();
+				//foreach
+				//result.contents += ue -> map ue2SemainierPararaph();
+				//foreach
+				//result.contents += ue -> map ue2RessourcesPararaph();
+			}
+			//parcours.ueOptionelles
+		}			
+	}
+}
+
+//Titres
+mapping filMM::Mention::mention2Title(in formation : Formation) : smdMM::Title{
+	result.level := 1;
+	result.elements += self-> mention2Text(formation);
+}
+mapping filMM::Parcours::parcours2Title() : smdMM::Title{
+	result.level := 2;
+	result.elements += self-> parcours2Text();
+}
+mapping filMM::UE::ue2Title(in parcours : Parcours) : smdMM::Title{
+	result.level := 3;
+	result.elements += self-> ue2Text(parcours);
+}
+
+mapping filMM::Mention::mention2Text(in formation : Formation) : smdMM::Text {
+	result.text := formation.name + ' ' + self.name;
+}
+mapping filMM::Parcours::parcours2Text() : smdMM::Text {
+	result.text := self.name;
+}
+mapping filMM::UE::ue2Text(in parcours : Parcours) : smdMM::Text {
+	result.text := self.name;
+}
+
+
+//pargraphes
+mapping filMM::Mention::mention2Paragraph() : smdMM::Paragraph {         
+	result.elements += self-> mention2Descr();
+}
+mapping filMM::Parcours::parcours2Paragraph() : smdMM::Paragraph {         
+	result.elements += self-> parcours2Descr();
+}
+mapping filMM::UE::ue2Paragraph(in parcours : Parcours) : smdMM::Paragraph {         
+	result.elements += self-> ue2Descr(parcours);
+}
+
+mapping filMM::Mention::mention2Descr() : smdMM::Text {
+	result.text := self.description;
+}
+mapping filMM::Parcours::parcours2Descr() : smdMM::Text {
+	result.text := self.description;
+}
+mapping filMM::UE::ue2Descr(in parcours : Parcours) : smdMM::Text {
+	result.text := self.description;
+}
+
+
+//reponsable de ...
+mapping filMM::Mention::mention2reponsableParagraph() : smdMM::Paragraph {
+	result.elements += self-> mention2ResponsableDescr();
+}
+mapping filMM::Parcours::parcours2ResponsablePararaph() : smdMM::Paragraph {
+	result.elements += self-> parcours2ResponsableDescr();
+}
+
+mapping filMM::Mention::mention2ResponsableDescr() : smdMM::Text {
+	result.text := "Responsable : " + self.responsableFormation.name + ' ' + self.responsableFormation.email;
+}
+mapping filMM::Parcours::parcours2ResponsableDescr() : smdMM::Text {
+	result.text := "Responsable : " + self.responsableParcours.name + ' ' + self.responsableParcours.email;
+}

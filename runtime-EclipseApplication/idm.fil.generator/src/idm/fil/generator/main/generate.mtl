@@ -1,0 +1,163 @@
+[comment encoding = UTF-8 /]
+[**
+ * The documentation of the module generate.
+ */]
+[module generate('http://www.example.org/mm')]
+
+[**
+ * genere la base
+ * @param aFIL
+ */]
+[template public generateElement(aFIL : FIL)]
+[comment @main/]
+[file (aFIL.name + '.simplemarkdown', false, 'UTF-8')]
+<simplemarkdown:Document xmi:version="2.0" name="[aFIL.name.toUpperFirst()/]">
+<contents xsi:type="simplemarkdown:Title" level="1">
+<elements xsi:type="simplemarkdown:Text" text="[aFIL.name.toUpperFirst()/]"/>
+</contents>
+
+[comment  /]
+	[for (formation : Formation | aFIL.composeDesFormations)]
+		[for (mention : Mention | formation.composeDesMentions)]
+[generateFormationMention(formation, mention)/] 
+		[/for]
+	[/for]
+</simplemarkdown:Document>
+[/file]
+[/template]
+
+[**
+ * genere les formations et les mentions
+ * @param aFormation
+ * @param aMention
+ */]
+[template public generateFormationMention(aFormation : Formation, aMention : Mention)]
+<contents xsi:type="simplemarkdown:Title" level="1">
+<elements xsi:type="simplemarkdown:Text" text="[aFormation.name.toUpperFirst()/] [aMention.name.toUpperFirst()/]"/>
+</contents>
+	[if (aFormation.description->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[aFormation.description/]"/>
+</contents>
+	[/if]
+	[if (aFormation.ressourcesAdministratives->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[aFormation.ressourcesAdministratives.contenu/]"/>
+</contents>
+	[/if]
+	[if (aMention.description->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[aMention.description/]"/>
+</contents>
+	[/if]
+	[if (aMention.ressourceadministrative->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[aMention.ressourceadministrative.contenu/]"/>
+</contents>
+	[/if]
+	[if (aMention.ressourcepedagogique->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[aMention.ressourcepedagogique.contenu/]"/>
+</contents>
+	[/if]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="[aMention.responsableFormation.name/]"/>
+</contents>
+
+
+	[if (aMention.composeDesParcours->notEmpty())]
+		[for (parcours : Parcours | aMention.composeDesParcours)]
+[generateParcours(parcours)/] 
+		[/for]
+	[else]	
+[generateNoParcours(aMention)/]
+	[/if]
+[/template]
+
+[**
+ * génère les parcours
+ * @param aParcours
+ */]
+[template public generateParcours(aParcours : Parcours)]
+<contents xsi:type="simplemarkdown:Title" level="2">
+<elements xsi:type="simplemarkdown:Text" text="[aParcours.name/]"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="[aParcours.responsableParcours.name/]"/>
+</contents>
+	[for (semestre : Semestre | aParcours.semestres)]
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S[semestre.name/]"/>
+</contents>
+		[for (ue : UE | semestre.composesDesUEs)]
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="[ue.name.toUpper()/]"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : [ue.nbECTS/]"/>
+</contents>
+			[if (ue.description->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="[ue.description/]"/>
+</contents>
+			[/if]
+			[if (ue.enseignants->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+				[for (prof : Professeur | ue.enseignants)]
+<elements xsi:type="simplemarkdown:Text" text="[prof.name/] "/>
+				[/for]
+</contents>
+			[/if]
+			[if (ue.semainier.name->notEmpty())]
+<contents xsi:type="simplemarkdown:Title" level="5">
+<elements xsi:type="simplemarkdown:Text" text="[ue.semainier.name.toUpperFirst()/]"/>
+</contents>
+				[for (sem : Semaine | ue.semainier.composeDeSemaines)]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :[sem.Début/], a : [sem.Fin/], [for (res : Ressource | sem.ressourcepedagogique)] [res.name/] : [res.contenu/], [/for]remarque :[sem.Remarque/]"/>
+				[/for]
+			[/if]
+		[/for]
+	[/for]
+[/template]
+
+
+[**
+ * génère quand la formation n'a pas de parcours
+ * @param aParcours
+ */]
+[template public generateNoParcours(aMention : Mention)]
+	[for (semestre : Semestre | aMention.composeDeSemestres)]
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S[semestre.name/]"/>
+</contents>
+		[for (ue : UE | semestre.composesDesUEs)]
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="[ue.name.toUpper()/]"/>
+</contents>
+			[if (ue.description->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : [ue.nbECTS/]
+[ue.description/]"/>
+</contents>
+			[/if]
+			[if (ue.enseignants->notEmpty())]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+			[for (prof : Professeur | ue.enseignants)]
+<elements xsi:type="simplemarkdown:Text" text="[prof.name/] "/>
+			[/for]
+</contents>
+			[/if]
+			[if (ue.semainier->notEmpty())]
+				[for (sem : Semaine | ue.semainier.composeDeSemaines)]
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :[sem.Début/], a : [sem.Fin/], [for (res : Ressource | sem.ressourcepedagogique)] [res.name/] : [res.contenu/], [/for]remarque :[sem.Remarque/]"/>
+				[/for]
+			[/if]
+		[/for]
+	[/for]
+[/template]

@@ -1,0 +1,274 @@
+<simplemarkdown:Document xmi:version="2.0" name="Portail">
+<contents xsi:type="simplemarkdown:Title" level="1">
+<elements xsi:type="simplemarkdown:Text" text="Portail"/>
+</contents>
+
+<contents xsi:type="simplemarkdown:Title" level="1">
+<elements xsi:type="simplemarkdown:Text" text="Master Info"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="master mention informatique"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="Romain Rouvroy"/>
+</contents>
+
+
+<contents xsi:type="simplemarkdown:Title" level="2">
+<elements xsi:type="simplemarkdown:Text" text="e-services"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="Jean-Claude Tarby"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S1"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ACT"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 6"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="5">
+<elements xsi:type="simplemarkdown:Text" text="Cours"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :29/11/21, a : 05/12/21,  act_ressources : R, remarque :une semaine"/>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :06/12/21, a : 12/12/21,  act_ressources : R, remarque :"/>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="PJE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+<elements xsi:type="simplemarkdown:Text" text="Cedric Dumoulin "/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IIR"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ANGLAIS"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="TAC"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IDM"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+<elements xsi:type="simplemarkdown:Text" text="Cedric Dumoulin "/>
+<elements xsi:type="simplemarkdown:Text" text="Xavier Lepallec "/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S2"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ASE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ISI"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="PJI"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ASA"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="SR1"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="SR2"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="BDR"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IIHM"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+ 
+<contents xsi:type="simplemarkdown:Title" level="2">
+<elements xsi:type="simplemarkdown:Text" text="genie logiciel"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="Clement Quinton"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S1"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ACT"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 6"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="5">
+<elements xsi:type="simplemarkdown:Text" text="Cours"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :29/11/21, a : 05/12/21,  act_ressources : R, remarque :une semaine"/>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :06/12/21, a : 12/12/21,  act_ressources : R, remarque :"/>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="PJE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+<elements xsi:type="simplemarkdown:Text" text="Cedric Dumoulin "/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IIR"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ANGLAIS"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="TAC"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IDM"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+<elements xsi:type="simplemarkdown:Text" text="Cedric Dumoulin "/>
+<elements xsi:type="simplemarkdown:Text" text="Xavier Lepallec "/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S2"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ASE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ISI"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="PJI"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="ASA"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="SR1"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="SR2"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="BDR"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="IIHM"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0"/>
+</contents>
+ 
+ 
+<contents xsi:type="simplemarkdown:Title" level="1">
+<elements xsi:type="simplemarkdown:Text" text="Master MIAGE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Responsable : "/>
+<elements xsi:type="simplemarkdown:Text" text="invalid"/>
+</contents>
+
+
+<contents xsi:type="simplemarkdown:Title" level="3">
+<elements xsi:type="simplemarkdown:Text" text="S1"/>
+</contents>
+<contents xsi:type="simplemarkdown:Title" level="4">
+<elements xsi:type="simplemarkdown:Text" text="MIAGE"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="ECTS : 0
+on apprend le miage"/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:StrongEmphasis" text="Intervenants : "/>
+<elements xsi:type="simplemarkdown:Text" text="Mr. Miage "/>
+</contents>
+<contents xsi:type="simplemarkdown:Paragraph">
+<elements xsi:type="simplemarkdown:Text" text="de :ajd, a : demain,  miage : le miage, remarque :journée miage"/>
+
+ 
+</simplemarkdown:Document>
