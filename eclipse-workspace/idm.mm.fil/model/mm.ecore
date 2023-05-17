@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="mm" nsURI="http://www.example.org/mm" nsPrefix="mm">
+  <eClassifiers xsi:type="ecore:EClass" name="UE">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semainier" upperBound="-1"
+        eType="#//Semainier" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourcepedagogique" upperBound="-1"
+        eType="#//Ressource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enseignants" lowerBound="1"
+        upperBound="-1" eType="#//Professeur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="nbECTS" eType="ecore:EDataType http://www.eclipse.org/emf/2003/XMLType#//Int"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Ressource" eSuperTypes="#//Contenu">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="contenu" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Semainier" eSuperTypes="#//Contenu">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composeDeSemaines" upperBound="-1"
+        eType="#//Semaine" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Formation">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composeDesMentions" upperBound="-1"
+        eType="#//Mention" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourcesAdministratives"
+        upperBound="-1" eType="#//Ressource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="secretairepedagogique"
+        eType="#//SecretairePedagogique" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Semestre">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composesDesUEs" upperBound="-1"
+        eType="#//UE" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="FIL">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composeDesFormations" upperBound="-1"
+        eType="#//Formation" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="enseignantsChercheurs"
+        upperBound="-1" eType="#//Professeur" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Mention">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composeDeSemestres" upperBound="6"
+        eType="#//Semestre" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="composeDesParcours" upperBound="-1"
+        eType="#//Parcours" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsableFormation" eType="#//Professeur"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourcepedagogique" upperBound="-1"
+        eType="#//Ressource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourceadministrative"
+        upperBound="-1" eType="#//Ressource" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ueOptionnelles" upperBound="-1"
+        eType="#//UE"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Professeur" eSuperTypes="#//Personne"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SecretairePedagogique" eSuperTypes="#//Personne"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Parcours">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="semestres" upperBound="6"
+        eType="#//Semestre"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ueObligatoires" upperBound="-1"
+        eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ueOptionelles" upperBound="-1"
+        eType="#//UE"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="responsableParcours" eType="#//Professeur"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="description" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Contenu" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Personne" abstract="true">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="email" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Semaine">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ressourcepedagogique" upperBound="-1"
+        eType="#//Ressource"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Début" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Fin" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="Remarque" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
+</ecore:EPackage>

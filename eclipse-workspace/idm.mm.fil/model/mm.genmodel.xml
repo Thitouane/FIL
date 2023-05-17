@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel"
+    modelDirectory="/idm.mm.fil/src-gen" creationIcons="false" editDirectory="/idm.mm.fil.edit/src-gen"
+    editorDirectory="/idm.mm.fil.editor/src-gen" modelPluginID="idm.mm.fil" modelName="Mm"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
+    importerID="org.eclipse.emf.importer.ecore" complianceLevel="5.0" copyrightFields="false"
+    operationReflection="true" importOrganizing="true">
+  <foreignModel>mm.ecore</foreignModel>
+  <testsDirectory xsi:nil="true"/>
+  <genPackages prefix="Mm" basePackage="idm.mm.fil" disposableProviderFactory="true"
+      ecorePackage="mm.ecore#/">
+    <genClasses ecoreClass="mm.ecore#//UE">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//UE/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//UE/semainier"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//UE/ressourcepedagogique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//UE/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//UE/enseignants"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//UE/nbECTS"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Ressource">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Ressource/contenu"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Semainier">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Semainier/composeDeSemaines"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Formation">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Formation/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Formation/composeDesMentions"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Formation/ressourcesAdministratives"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Formation/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Formation/secretairepedagogique"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Semestre">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Semestre/composesDesUEs"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Semestre/name"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//FIL">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//FIL/composeDesFormations"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//FIL/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//FIL/enseignantsChercheurs"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Mention">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Mention/description"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/composeDeSemestres"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/composeDesParcours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Mention/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/responsableFormation"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/ressourcepedagogique"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/ressourceadministrative"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Mention/ueOptionnelles"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Professeur"/>
+    <genClasses ecoreClass="mm.ecore#//SecretairePedagogique"/>
+    <genClasses ecoreClass="mm.ecore#//Parcours">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Parcours/semestres"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Parcours/ueObligatoires"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Parcours/ueOptionelles"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Parcours/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Parcours/responsableParcours"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Parcours/description"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mm.ecore#//Contenu">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Contenu/name"/>
+    </genClasses>
+    <genClasses image="false" ecoreClass="mm.ecore#//Personne">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Personne/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Personne/email"/>
+    </genClasses>
+    <genClasses ecoreClass="mm.ecore#//Semaine">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference mm.ecore#//Semaine/ressourcepedagogique"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Semaine/Début"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Semaine/Fin"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute mm.ecore#//Semaine/Remarque"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
